@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "392c1216-b6e5-4294-a6d8-89ac3c5b6271",
+		"name": "Hayk Poghosyan,Qwallity-herokuapp2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Fundamental courses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qwallity2.herokuapp.com/courses/fundamental/api",
+					"protocol": "https",
+					"host": [
+						"qwallity2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"fundamental",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Advanced Courses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qwallity2.herokuapp.com/courses/advanced/api",
+					"protocol": "https",
+					"host": [
+						"qwallity2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"advanced",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new course with datas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Hayko\",\r\n    \"body\":\"Haykooo\",\r\n    \"coursetype\":\"2\",\r\n    \"author\":\"Poghosyan Hayk\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qwallity2.herokuapp.com/add_course/api",
+					"protocol": "https",
+					"host": [
+						"qwallity2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"add_course",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update already exists course with new datas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Hayk QA\",\r\n    \"body\":\"Hayk123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qwallity2.herokuapp.com/course/1522/update",
+					"protocol": "https",
+					"host": [
+						"qwallity2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"course",
+						"1522",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qwallity2.herokuapp.com/courses/course/1514",
+					"protocol": "https",
+					"host": [
+						"qwallity2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"course",
+						"1514"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
